@@ -6,5 +6,5 @@ RUN cd /opt/ndk-tmp && unzip android-ndk-r17-linux-x86_64.zip
 RUN mkdir /data
 RUN /opt/ndk-tmp/android-ndk-r17/build/tools/make-standalone-toolchain.sh --arch=x86 --install-dir=/data --verbose --force
 
-FROM base/archlinux as packer
+FROM scratch as packer
 COPY --from=builder /data /data
