@@ -1,5 +1,5 @@
 FROM base/archlinux as builder
-RUN pacman -Syu --needed --noconfirm unzip wget
+RUN pacman -Syu --needed --noconfirm unzip wget python
 RUN mkdir /opt/ndk-tmp
 RUN cd /opt/ndk-tmp && wget -q https://dl.google.com/android/repository/android-ndk-r17-linux-x86_64.zip
 RUN cd /opt/ndk-tmp && unzip android-ndk-r17-linux-x86_64.zip
